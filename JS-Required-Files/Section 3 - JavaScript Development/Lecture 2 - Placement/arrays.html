@@ -11,7 +11,8 @@
             var abc =[
                 "a" , "b" , "c"
             ];
-            document.getElementById("mostrar").innerHTML = abc[1];
+            abc.splice(2,0,"d","e");
+            document.getElementById("mostrar").innerHTML = abc.toString();
             //abc.toString()
             //abc.join(" * ");
             //abc.pop() sacar del ultimo
@@ -19,7 +20,7 @@
             //abc.push() nuevo elemento al final
             //abc.unshift() nuevo elemento al comienzo 
             //delete abc[2] elimina el elemento posicionado tercero.
-            //abc.splice(2,0,"d","e";)
+            //abc.splice(2,2,"d","e";)
             //El método splice() cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.
         </script>
     </body>
