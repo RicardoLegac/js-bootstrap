@@ -7,12 +7,13 @@
         <button onclick="myfunction()">click</button>
         <br>
         <p>ingresa un numero: </p>
-        <input type="text" name="texto" size=15>
+        <input type="text" name="texto" size=15 id="entrada">
         <script>
+            var number= document.getElementById("entrada").value;
             function myfunction() {
                 do{
 
-                }while(i<10);
+                }while(i<number);
             }
         </script>
     </body>
