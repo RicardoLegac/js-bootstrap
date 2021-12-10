@@ -9,11 +9,16 @@
         <p>ingresa un numero: </p>
         <input type="text" name="texto" size=15 id="entrada">
         <script>
-            var number= document.getElementById("entrada").value;
+            
             function myfunction() {
+                var number= document.getElementById("entrada").value;
+                var i=0;
+                document.write(number + "hola");
                 do{
-
+                    document.write(i + "<br>");
+                    i++;
                 }while(i<number);
+                
             }
         </script>
     </body>
