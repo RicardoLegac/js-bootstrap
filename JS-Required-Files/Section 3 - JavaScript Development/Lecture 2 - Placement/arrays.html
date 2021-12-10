@@ -21,6 +21,11 @@
                 document.write(valores[i] + "<br>");
                 
             }
+            var txt = "";
+            var person = {name: "Ricardo", lastname: "Leguizamon", age:24};
+            for (var x in person){
+                txt = txt + person [x] + " ";
+            }
             document.write(valores.toString());
             //abc.splice(2,0,"d","e");
             document.getElementById("mostrar").innerHTML = abc.toString();
