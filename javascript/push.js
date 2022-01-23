@@ -8,4 +8,11 @@ console.log(Array.isArray(autos) ? "es un array": "no es un array");
 
 /*funcion de tipo expresion*/
 let sumar = function(a,b){ return (a+b)}; 
-console.log(sumar(2,3))
+console.log(sumar(2,3));
+console.log(sumar.length);
+
+
+/*funcion tipo flecha*/
+
+const sumaflecha = (a,b) => (a+b);
+console.log(sumaflecha(3,3));
