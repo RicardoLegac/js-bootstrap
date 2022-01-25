@@ -94,3 +94,10 @@ console.log(objetoPersona);
 
 console.log(padre.nombreCompleto());
 console.log(padre.nombrecompleto);
+
+console.log(typeof padre.nombrecompleto);
+
+let numero = new Number(1); 
+let numero2 = 1;
+
+console.log(typeof numero, numero ," __ ", typeof numero2, numero2)
