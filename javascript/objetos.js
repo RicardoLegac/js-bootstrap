@@ -37,3 +37,15 @@ console.log(personaArray)
 
 let personaString = JSON.stringify(persona);
 console.log(personaString);
+
+//OBTENER INFORMACION DE UN OBJETO: esto simplifica usar una funcion.
+
+let persona3 = {
+    nombre: 'Marlyn',
+    apellido: 'Candia',
+    get nombreyapellido(){
+        return this.nombre + " "  + this.apellido;
+    }
+}
+
+console.log(persona3.nombreyapellido);
