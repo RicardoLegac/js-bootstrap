@@ -63,3 +63,22 @@ console.log(persona3.lang, persona3.idioma);
 persona3.lang = 'en';
 //aqui automaticamente convertimos en mayuscula llamando al metodo set:
 console.log(persona3.lang);
+
+
+/*SIEMPRE ES MEJOR  USAR CONSTRUCTOR */
+//FUNCION CONSTRUCTOR DE OBJETOS DE TIPO PERSONA
+
+function Persona(nombre='nombre',apellido='apellido',email='email'){
+    //lado derecho es el parametro que estamos definiendo en nuestra funcion
+    //lado izquierdo es la propiedad de nuestro objeto! 
+    this.nombre= nombre;
+    this.apellido = apellido;
+    this.email = email;
+
+}
+
+let padre = new Persona('RICARDO','LEGUIZAMON','ricklegac@gmail.com');
+console.log(padre);
+
+let objetoPersona = new Persona();
+console.log(objetoPersona);
