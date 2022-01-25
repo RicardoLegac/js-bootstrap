@@ -43,11 +43,22 @@ console.log(personaString);
 let persona3 = {
     nombre: 'Marlyn',
     apellido: 'Candia',
+    idioma: 'es',
     get nombreyapellido(){
         return this.nombre + " "  + this.apellido;
+    },
+    get lang(){
+        return this.idioma.toUpperCase();
+    },
+    set lang(idiomanuevo){
+        return this.idioma = idiomanuevo.toUpperCase();
     }
+
 }
 console.log(persona3.nombreyapellido);
 for( propiedad in persona3){
     console.log(persona3[propiedad]);
 }
+persona3.lang = 'en';
+//aqui automaticamente convertimos en mayuscula:
+console.log(persona3.lang);
