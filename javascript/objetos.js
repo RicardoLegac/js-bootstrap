@@ -107,4 +107,22 @@ console.log(typeof numero, numero ," __ ", typeof numero2, numero2)
 
 Persona.prototype.tel = '000';
 
-//METODO CALL
+//METODO CALL 
+let p1 = {
+    nombre: 'Juan',
+    apellido: 'Perez',
+    nombreCompleto: function(titulo, tel){
+        return titulo + ': ' + this.nombre + ' ' + this.apellido + ', ' + tel;
+    }
+}
+
+let p2 = {
+    nombre: 'Carlos',
+    apellido: 'Lara'
+}
+
+//Uso de call para usar 
+//el metodo persona1.nombreCompleto con los datos del persona2
+console.log( p1.nombreCompleto('Lic.', '44332288') );
+
+console.log( p1.nombreCompleto.call( p2, 'Ing', '5544332211' ) );
