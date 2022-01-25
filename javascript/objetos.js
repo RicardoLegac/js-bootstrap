@@ -6,3 +6,7 @@ let persona = {
     }
 }
 console.log(persona.nombreCompleto());
+
+let persona2 = new Object(); //CREAMOS NUEVO OBJETO EN MEMORIA
+
+persona2.nombre = 'Gianna';
