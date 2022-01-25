@@ -59,6 +59,7 @@ console.log(persona3.nombreyapellido);
 for( propiedad in persona3){
     console.log(persona3[propiedad]);
 }
+console.log(persona3.lang, persona3.idioma);
 persona3.lang = 'en';
-//aqui automaticamente convertimos en mayuscula:
+//aqui automaticamente convertimos en mayuscula llamando al metodo set:
 console.log(persona3.lang);
