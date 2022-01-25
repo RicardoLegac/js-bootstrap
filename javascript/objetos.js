@@ -5,3 +5,4 @@ let persona = {
         return this.nombre + " " + this.apellido;
     }
 }
+console.log(persona.nombreCompleto());
