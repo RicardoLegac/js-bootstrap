@@ -47,5 +47,7 @@ let persona3 = {
         return this.nombre + " "  + this.apellido;
     }
 }
-
 console.log(persona3.nombreyapellido);
+for( propiedad in persona3){
+    console.log(persona3[propiedad]);
+}
