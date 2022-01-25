@@ -25,3 +25,15 @@ for(propiedad in persona){
 //ELIMINAR UNA PROPIEDAD 
 
 delete persona.nombre; 
+
+//CONCATENAR PROPIEDAD DE UN OBJETO
+
+for (propiedad in persona){
+    console.log(persona[propiedad]);
+}
+
+let personaArray = Object.values(persona);
+console.log(personaArray)
+
+let personaString = JSON.stringify(persona);
+console.log(personaString);
