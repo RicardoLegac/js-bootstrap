@@ -74,7 +74,16 @@ function Persona(nombre='nombre',apellido='apellido',email='email'){
     this.nombre= nombre;
     this.apellido = apellido;
     this.email = email;
-
+    this.nombreCompleto = function(){
+        return this.nombre + " " + this.apellido;
+    }
+    /*get this.nombrecom(){ ver como funciona esto cuando es constructores 
+        return this.nombre + " " + this.apellido;
+    }
+    
+    */
+    this.nombrecompleto = this.nombre.concat(' ',this.apellido);
+    
 }
 
 let padre = new Persona('RICARDO','LEGUIZAMON','ricklegac@gmail.com');
@@ -82,3 +91,6 @@ console.log(padre);
 
 let objetoPersona = new Persona();
 console.log(objetoPersona);
+
+console.log(padre.nombreCompleto());
+console.log(padre.nombrecompleto);
