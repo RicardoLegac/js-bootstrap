@@ -21,3 +21,7 @@ for(propiedad in persona){
     console.log(propiedad);
     console.log(persona[propiedad]);
 }
+
+//ELIMINAR UNA PROPIEDAD 
+
+delete persona.nombre; 
