@@ -121,7 +121,7 @@ let p2 = {
     apellido: 'Lara'
 }
 
-//Uso de call para usar 
+//Uso de call para usar , VER TAMBIEN EL METODO apply 
 //el metodo persona1.nombreCompleto con los datos del persona2
 console.log( p1.nombreCompleto('Lic.', '44332288') );
 
