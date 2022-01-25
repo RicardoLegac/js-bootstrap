@@ -106,3 +106,5 @@ console.log(typeof numero, numero ," __ ", typeof numero2, numero2)
 //AGREGAR UNA NUEVA PROPIEDAD A TODOS LOS OBJETOS DE TIPO Persona
 
 Persona.prototype.tel = '000';
+
+//METODO CALL
