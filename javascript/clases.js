@@ -17,7 +17,8 @@ class Persona{
     }
 }
 class Empleado extends Persona{
-    constructor(departamento){
+    constructor(nombre,apellido,departamento){
+        super(nombre,apellido); //llamar el constructor de la clase Padre
         this._departamento = departamento;
     }
     get departamento(){
