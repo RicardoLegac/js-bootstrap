@@ -33,3 +33,6 @@ console.log(persona1);
 
 persona1.nombre= 'Gianna'; //con el metodo set!
 console.log(persona1.nombre);
+
+let empleado = new Empleado('Rick','Legac','Ing');
+console.log(empleado);
