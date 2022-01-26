@@ -15,6 +15,14 @@ class Persona{
     set apellido(apellido){
         this._apellido = apellido;
     }
+    nombreCompleto(){
+        return this._nombre + " " + this._apellido;
+    }
+    //sobrescribimos OBject!
+    toString(){
+        //se aplica polimorfismo! 
+        return this._nombre + " " + this._apellido;
+    }
 }
 class Empleado extends Persona{
     constructor(nombre,apellido,departamento){
@@ -27,6 +35,15 @@ class Empleado extends Persona{
     set departamento(departamento){
         this._departamento = departamento;
     }
+
+    //SOBREESCRITURA
+    /*nombreCompleto(){
+        return this._nombre + ' ' + this._apellido + ' ' + this._departamento;
+    }*/
+
+    nombreCompleto(){
+        return super.nombreCompleto() + ' ' + this._departamento;
+    }
 }
 let persona1 = new Persona('Ricardo','Leguizamon'); //si no se define un constructor, JavaScript agrega un vacio automatico
 console.log(persona1); 
@@ -35,4 +52,4 @@ persona1.nombre= 'Gianna'; //con el metodo set!
 console.log(persona1.nombre);
 
 let empleado = new Empleado('Rick','Legac','Ing');
-console.log(empleado);
+console.log(empleado.nombreCompleto());
