@@ -1,7 +1,10 @@
 class Persona{
+    static contadorPersona = 0; //atributo de nuestra clase! 
+
     constructor(nombre,apellido){ //se acostumbran en las propiedades del constructor se utilize '_' antes del nombre de la propiedad
         this._nombre=nombre;
         this._apellido=apellido;
+        this.idPersona = Persona.contadorPersona++;
     }
     get nombre(){ //para obtener el atributo nombre
         return this._nombre;
@@ -21,7 +24,7 @@ class Persona{
     //sobrescribimos OBject!
     toString(){
         //se aplica polimorfismo! 
-        return this._nombre + " " + this._apellido;
+        return this.idPersona + ' ' + this._nombre + " " + this._apellido;
     }
 }
 class Empleado extends Persona{
@@ -52,4 +55,7 @@ persona1.nombre= 'Gianna'; //con el metodo set!
 console.log(persona1.nombre);
 
 let empleado = new Empleado('Rick','Legac','Ing');
-console.log(empleado.nombreCompleto());
+console.log(empleado.toString());
+
+let persona2 = new Persona('Gianna', 'Ozuna');
+console.log(persona2.toString())
