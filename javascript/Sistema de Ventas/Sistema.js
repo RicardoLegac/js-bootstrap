@@ -14,4 +14,13 @@ class Producto{
     get getPrecio(){
         return this._precio;
     }
+    set setNombre(nombre){
+        this._nombre = nombre;
+    }
+    set setPrecio(precio){
+        this._precio = precio;
+    }
+    toString(){
+        return `nombre: ${this._nombre} precio: ${this._precio} ID: ${this._idProducto}`;
+    }
 }
