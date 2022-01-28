@@ -24,3 +24,25 @@ class Producto{
         return `nombre: ${this._nombre} precio: ${this._precio} ID: ${this._idProducto}`;
     }
 }
+class Orden{ //es de agregacion no de extends
+    static contadorOrdenes = 0;
+    static get MAX_PRODUCTOS(){
+        return 5;
+    }
+    constructor(){
+        this._idOrden = Orden.contadorOrdenes++;
+        this._productos =[];
+        this._contadorProductosAgg  = 0;
+    }
+    get getIdOrden(){
+        return this._idOrden;
+    }
+    agregarProductos(producto){
+        if(this._productos.length < Orden.MAX_PRODUCTOS){
+            this._productos.push(producto);
+            //this._productos[this._contadorProductosAgg++] = producto;
+        }else{
+            console.log('No se pueden agregar mas productos';)
+        }
+    }
+}
