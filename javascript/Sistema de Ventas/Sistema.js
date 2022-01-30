@@ -45,4 +45,10 @@ class Orden{ //es de agregacion no de extends
             console.log('No se pueden agregar mas productos';)
         }
     }
+    calcularTotal(){
+        totalVenta=0;
+        for(let p of this._productos){
+            totalVenta+=producto.precio;
+        }
+    }
 }
