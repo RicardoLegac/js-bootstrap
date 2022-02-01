@@ -74,8 +74,15 @@ class Raton extends DispositivoEntrada{
 }
 class Teclado extends DispositivoEntrada{
     static contadorTeclado = 0;
-    constructor(){
-
+    constructor(tipoentrada,marca){
+        super(tipoentrada,marca);
+        this._idTeclado = Teclado.contadorTeclado++;
+    }
+    get getIdTeclado(){
+        return this._idTeclado;
+    }
+    toString(){
+        return `tipo entrada: ${this._marca}, marca: ${this._marca}, idTeclado: ${this._idTeclado}`;
     }
 }
 let raton = new Raton('USB', 'HP');
