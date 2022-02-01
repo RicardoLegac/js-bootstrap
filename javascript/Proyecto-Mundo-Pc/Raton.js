@@ -87,3 +87,25 @@ class Teclado extends DispositivoEntrada{
 }
 let raton = new Raton('USB', 'HP');
 console.log(raton.toString());
+
+
+class Monitor{
+    static contadorMonitor =0;
+    constructor(marca,tamano){
+        this._idMonitor=Monitor.contadorMonitor++;
+        this._marca=marca;
+        this._tamano=tamano;
+    }
+    get getMarca(){
+        return this._marca;
+    }
+    get getTamano(){
+        return this._tamano;
+    }
+    set setMarca(marca){
+        this._marca = marca;
+    }
+    set setTamano(tamano){
+        this._tamano= tamano;
+    }
+}
