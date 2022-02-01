@@ -1,3 +1,15 @@
+class Computadora{
+    static contadorComputadora = 0;
+    constructor(nombre,monitor,teclado,raton){
+        this._nombre=nombre;
+        this._monitor=monitor;
+        this._teclado=teclado;
+        this._raton=raton;
+        this._idComputadora = Computadora.contadorComputadora++;
+    }
+
+}
+
 class DispositivoEntrada{
 
     constructor(tipoentrada,marca){
@@ -20,3 +32,6 @@ class DispositivoEntrada{
 
 }
 
+class Raton{
+
+}
