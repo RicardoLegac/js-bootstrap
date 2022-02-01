@@ -1,40 +1,4 @@
-class Computadora{
-    static contadorComputadora = 0;
-    constructor(nombre,monitor,teclado,raton){
-        this._nombre=nombre;
-        this._monitor=monitor;
-        this._teclado=teclado;
-        this._raton=raton;
-        this._idComputadora = Computadora.contadorComputadora++;
-    }
-    get getNombre(){
-        return this._nombre;
-    }
-    get getMonitor(){
-        return this._monitor;
-    }
-    get getTeclado(){
-        return this._teclado;
-    }
-    get getRaton(){
-        return this._raton;
-    }
-    get getIdComputadora(){
-        return this._idComputadora;
-    }
-    set setNombre(nombre){
-        this._nombre=nombre;
-    }
-    set setMonitor(monitor){
-        this._monitor=monitor;
-    }
-    set setRaton(raton){
-        this._raton=raton;
-    }
-    toString(){
-        return `nombre: ${this._nombre}, monitor: ${this._monitor}, raton: ${this._raton}, teclado: ${this._teclado}`
-    }
-}
+
 
 class DispositivoEntrada{
 
@@ -108,4 +72,50 @@ class Monitor{
     set setTamano(tamano){
         this._tamano= tamano;
     }
+    toString(){
+        return `idMonitor: ${this._idMonitor} marca: ${this._marca} tamano: ${this._tamano}`;
+    }
 }
+
+class Computadora{
+    static contadorComputadora = 0;
+    constructor(nombre,monitor,teclado,raton){
+        this._nombre=nombre;
+        this._monitor=monitor;
+        this._teclado=teclado;
+        this._raton=raton;
+        this._idComputadora = Computadora.contadorComputadora++;
+    }
+    get getNombre(){
+        return this._nombre;
+    }
+    get getMonitor(){
+        return this._monitor;
+    }
+    get getTeclado(){
+        return this._teclado;
+    }
+    get getRaton(){
+        return this._raton;
+    }
+    get getIdComputadora(){
+        return this._idComputadora;
+    }
+    set setNombre(nombre){
+        this._nombre=nombre;
+    }
+    set setMonitor(monitor){
+        this._monitor=monitor;
+    }
+    set setRaton(raton){
+        this._raton=raton;
+    }
+    toString(){
+        return `nombre: ${this._nombre} \n ${this._monitor} \n ${this._raton} \n ${this._teclado}`
+    }
+}
+let monitor1 = new Monitor('Viewsonic',22);
+let teclado1 = new Teclado('USB','HAVIT');
+let raton1 = new Raton('USB','RAZER');
+let computadora = new Computadora('HP',monitor1,teclado1,raton1);
+console.log(computadora.toString());
