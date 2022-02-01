@@ -119,3 +119,18 @@ let teclado1 = new Teclado('USB','HAVIT');
 let raton1 = new Raton('USB','RAZER');
 let computadora = new Computadora('HP',monitor1,teclado1,raton1);
 console.log(computadora.toString());
+
+class Orden{
+    static contadorOrden =0;
+    constructor(){
+        this._idOrden = Orden.contadorOrden++;
+        this._computadora =  [];
+    }
+
+    get getIdOrden(){
+        return this._idOrden;
+    }
+    agregarComputadora(computadora){
+        this._computadora.push(computadora);
+    }
+}
