@@ -39,8 +39,9 @@ class Computadora{
 class DispositivoEntrada{
 
     constructor(tipoentrada,marca){
-        this._marca= marca;
         this._tipoentrada = tipoentrada;
+        this._marca= marca;
+        
     }
     get getMarca(){
         return this._marca;
@@ -60,14 +61,22 @@ class DispositivoEntrada{
 
 class Raton extends DispositivoEntrada{
     static contadorRatones=0;
-    constructor(){
-        super(tipoentrada,maca);
+    constructor(tipoentrada,marca){
+        super(tipoentrada,marca);
         this._idRaton = Raton.contadorRatones++;
     }
     get getIdRaton(){
         return this._idRaton;
     }
     toString(){
-        return `tipo entrada: ${this._tipoentrada}, raton: ${this._raton}, marca: ${this._marca}`;
+        return `tipo entrada: ${this._tipoentrada}, raton: ${this._idRaton}, marca: ${this._marca}`;
     }
 }
+class Teclado extends DispositivoEntrada{
+    static contadorTeclado = 0;
+    constructor(){
+
+    }
+}
+let raton = new Raton('USB', 'HP');
+console.log(raton.toString());
