@@ -61,7 +61,13 @@ class DispositivoEntrada{
 class Raton extends DispositivoEntrada{
     static contadorRatones=0;
     constructor(){
+        super(tipoentrada,maca);
         this._idRaton = Raton.contadorRatones++;
     }
-
+    get getIdRaton(){
+        return this._idRaton;
+    }
+    toString(){
+        return `tipo entrada: ${this._tipoentrada}, raton: ${this._raton}, marca: ${this._marca}`;
+    }
 }
