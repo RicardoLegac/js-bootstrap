@@ -19,3 +19,5 @@ class DispositivoEntrada{
 
 
 }
+
+class Raton extends  
