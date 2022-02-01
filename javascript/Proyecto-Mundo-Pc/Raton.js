@@ -1,5 +1,5 @@
 
-
+"use strict";
 class DispositivoEntrada{
 
     constructor(tipoentrada,marca){
@@ -133,4 +133,17 @@ class Orden{
     agregarComputadora(computadora){
         this._computadora.push(computadora);
     }
+    mostrarOrden(){
+        let computadorasOrden = '';
+        for(let computador of this._computadora){
+            this._computadorasOrden += `${computadora} `; 
+        }
+
+        console.log(`Orden: ${this._idOrden} \n ${this._computadorasOrden}` );
+    }
 }
+
+let order = new Orden();
+
+order.agregarComputadora(computadora);
+order.mostrarOrden(); 
