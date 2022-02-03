@@ -1,3 +1,4 @@
+"use strict";
 class Empleado{
     constructor(nombre, sueldo){
         this.nombre = nombre;
@@ -25,3 +26,16 @@ console.log( empleado1.obtenerDetalles() );
 
 let gerente1 = new Gerente('Carlos', 5000, 'Sistemas');
 console.log( gerente1.obtenerDetalles() );
+
+function ImprimirDetalles(persona){
+    if(persona instanceof Empleado){
+        console.log('es un objeto de tipo Empleado ');
+    }
+    if(persona instanceof Gerente){
+        console.log('es un objeto de tipo Gerente');
+    }
+    return persona.obtenerDetalles(); //polimorfismo
+    
+}
+
+console.log(ImprimirDetalles(empleado1));
