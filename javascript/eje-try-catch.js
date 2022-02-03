@@ -1,8 +1,10 @@
 "use strict";
 try{
-    myFunc();
-}catch{
-    console.log("error encontrado");
+    myFunction();
+}catch(error){
+    console.log(error.name);
+    console.log(error);
+    console.log(error.message);
 }finally{
     console.log("termina");
 }
