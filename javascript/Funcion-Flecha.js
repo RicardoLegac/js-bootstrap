@@ -12,3 +12,8 @@ let Funcion  = function() {
 
 Funcion();
 
+
+const funcionFlecha2 = () => {
+    return ' un mensaje cualquiera ';
+}
+console.log(funcionFlecha2());
