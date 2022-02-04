@@ -15,3 +15,7 @@ miPromesa.then(
 ); //los argumentos son funciones de tipo flecha 
 
 //COMO COMUNMENTE VAMOS A ENCONTRAR: 
+
+miPromesa
+.then(valor => console.log(valor))
+.catch(error => console.log(error));
