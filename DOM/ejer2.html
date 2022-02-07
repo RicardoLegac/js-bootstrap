@@ -12,5 +12,15 @@
         Apellido: <input type="text" name="apellido" value="leguizamon"/>
     </form>
     <button onclick="mostrarValores()">Mostrar Datos</button>
+    <script>
+        function mostrarValores(){
+            let formulario = document.form['formulario'];
+            let texto = '';
+            for(let i of formulario){
+                texto += i.value + '\n';
+            }
+            console.log(texto);
+        }
+    </script>
 </body>
 </html>
