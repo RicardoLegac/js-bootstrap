@@ -11,15 +11,35 @@
         Nombre: :<input type="'text" name="nombre" value="Ricardo"/><br>
         Apellido: <input type="text" name="apellido" value="leguizamon"/>
     </form>
-    <button onclick="mostrarValores()">Mostrar Datos</button>
+    <h1 onclick="this.innerHTML='CAMBIO DE TITULO'" id="color">cambiamos de color</h1>
+
+    <!--
+        aca tambien podemos enviar en una function
+        onclick="funcioncualquiera(this)"
+        y le llamamos en el script
+        function funcioncualquiera(texto){
+            titulo.innerHTML= 'otrotitulo';
+        }
+
+    -->
+    <button onclick="mostrarValores()">Mostrar Datos</button> 
+    <button onclick="cambiarcolor()">cambiar color</button>
     <script>
         function mostrarValores(){
-            let formulario = document.form['formulario'];
+            let formulario = document.forms['formulario'];
             let texto = '';
             for(let i of formulario){
                 texto += i.value + '\n';
             }
+            let nombre = formulario['nombre'].value;
+            console.log('nombre obtenido: ',nombre);
             console.log(texto);
+        }
+        function cambiarcolor(){
+            var randomcolor= '#'+Math.floor(Math.random()*16777215).toString(16);
+            document.getElementById('color').style.color = randomcolor;
+            console.log(randomcolor);
+
         }
     </script>
 </body>
