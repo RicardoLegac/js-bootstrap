@@ -12,7 +12,12 @@
         <h1>Introduzca sus credenciales</h1>
         </br>
         <h3>Nombre:</h3>
-        <input type="text" onchange="convertir(this)" onfocus="amarillo(this)" onblur="blanco(this)" placeholder="Introduce your name"/>
+        <form>
+            <div>
+                <input type="text" id="nombre" onchange="convertir(this)" onfocus="amarillo(this)" onblur="blanco(this)" placeholder="Introduce your name"/>
+                <span id="text"></span>
+            </div>
+        </form>
         <!--
             El evento onchange se produce cuando el valor de un elemento se ha 
             cambiado. Para botones de radio y casillas de verificación, 
