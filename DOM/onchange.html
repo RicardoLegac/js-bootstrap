@@ -8,25 +8,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>cualquier h1</h1>
-    </br>
-    nombre: <input type="text" onchange="convertir(this)" onfocus="amarillo(this)" onblur="blanco(this)"/>
-    <!--
-        El evento onchange se produce cuando el valor de un elemento se ha 
-        cambiado. Para botones de radio y casillas de verificación, 
-        el evento onchange ocurre cuando el estado de activación se ha 
-        cambiado.
-    -->
-    apellido: <input type="text" id="inputs"/>
-    <br>
-    <h3>Email validation check</h3>
-    <form id="form">
-        <div class="InputBox">
-            <input type="text" name="" id="email" placeholder="Enter email address"/>
-            <span id="text"></span>
-        </div>
-    </form>
-
+    <div>
+        <h1>Introduzca sus credenciales</h1>
+        </br>
+        <h3>Nombre:</h3>
+        <input type="text" onchange="convertir(this)" onfocus="amarillo(this)" onblur="blanco(this)" placeholder="Introduce your name"/>
+        <!--
+            El evento onchange se produce cuando el valor de un elemento se ha 
+            cambiado. Para botones de radio y casillas de verificación, 
+            el evento onchange ocurre cuando el estado de activación se ha 
+            cambiado.
+        -->
+        <h3>Email:</h3>
+        <form id="form">
+            <div class="InputBox">
+                <input type="text" name="" id="email" placeholder="Enter email address"/>
+                <span id="text"></span>
+            </div>
+        </form>
+    </div>
     <script>
         
         function convertir(aconvertir){
