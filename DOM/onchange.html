@@ -9,7 +9,7 @@
 <body>
     <h1>cualquier h1</h1>
     </br>
-    nombre: <input type="text" onchange="convertir(this)"/>
+    nombre: <input type="text" onchange="convertir(this)" onfocus="amarillo(this)" onblur="blanco(this)"/>
     <!--
         El evento onchange se produce cuando el valor de un elemento se ha 
         cambiado. Para botones de radio y casillas de verificación, 
@@ -20,6 +20,10 @@
         function convertir(aconvertir){
             aconvertir.value = aconvertir.value.toUpperCase();
         }
+        function amarillo(aconvertir){
+            aconvertir.onfocus.style.background = 'yellow';
+        }
+
     </script> 
 </body>
 </html>
