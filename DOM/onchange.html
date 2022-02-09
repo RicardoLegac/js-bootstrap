@@ -15,7 +15,6 @@
         <form id="form">
             <div class="InputBox">
                 <input type="text" id="nombre" onchange="convertir(this)" onfocus="amarillo(this)" onblur="blanco(this)" placeholder="Introduce your name"/>
-                <span id="text"></span>
             </div>
         </form>
         <!--
@@ -27,7 +26,8 @@
         <h3>Email:</h3>
         <form id="form">
             <div class="InputBox">
-                <input type="text" name="" id="email" placeholder="Enter email address"/>
+                <input type="text" name="" id="email" placeholder="Enter email address"
+                onkeydown="validation()"/>
                 <span id="text"></span>
             </div>
         </form>
@@ -42,6 +42,29 @@
         }
         function blanco(aconvertir){
             aconvertir.style.background = 'white';
+        }
+        function validation(){
+            let form= document.getElementById('form');
+            let email= document.getElementById('email').value;
+            let text = document.getElementById('text');
+            let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if(email.match(pattern)){
+                form.classList.add("valid");
+                form.classList.remove("invalid");
+                text.innerHTML = "Your email address is valid"
+                text.style.color="#00ff00";
+            }else{
+                form.classList.add("invalid");
+                form.classList.remove("valid");
+                text.innerHTML = "Your email address is invalid"
+                text.style.color = "#ff0000"
+            }
+            if(email==""){
+                form.classList.remove('valid');
+                form.classList.remove('invalid');
+                text.innerHTML = "";
+                text.style.color = "#00ff00";
+            }
         }
 
     </script> 
