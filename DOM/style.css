@@ -43,7 +43,7 @@ h3{
     color: #fff;
     font-style: 18px;
 }
-#form #InputBox{
+#form .InputBox{
     position:relative;
 
 
@@ -61,5 +61,27 @@ h1{
     color: #000;
     font-weight: 300;
     font-style: italic;
-    padding: 5px;
+    padding: 5px;   
+}
+#form.invalid .InputBox:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(invalid.png);
+    background-size: cover; 
+    z-index: 1000; 
+}
+#form.valid .InputBox:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(valid.png);
+    background-size: cover; 
+    z-index: 1000; 
 }
