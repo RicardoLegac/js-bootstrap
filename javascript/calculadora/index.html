@@ -13,7 +13,24 @@
   <body>
     <div class='container'>
     <h1>Aplicacion Calculadora</h1>
-
+    <form id="forma">
+        <div class="mb-3"> 
+            <!-- el 3 significa que hay un espacio de 3 hacia abajo
+                es una clase de bootstrap 
+            -->
+            <label for="operandoA">operando A</label>
+            <input type="number" class="form-control" placeholder="Escribe operando A" id="operandoA"/>
+            
+        </div>
+        <div class="mb-3">
+            <label for="operandoB">Operando B</label>
+            <input type="number" class="form-control" placeholder="Escribe operando B" id="operandoB"/>
+        </div>
+        
+        
+    </form>  
+    <button type="submit" class="btn btn-prymary mb-3" onclick="sumar()">Sumar</button> 
+    <!-- sacamos del formulario para que cuando haga submit no se borre los datos ingresados--> 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
