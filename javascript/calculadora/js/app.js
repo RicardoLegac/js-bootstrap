@@ -5,6 +5,12 @@ function sumar(){
     let A = forma['operandoA'];
     let B = forma['operandoB'];
     let resultado = A.value + B.value;
-    document.getElementById('resultado').innerHTML = `Resultado: ${resultado}`;
+    if (!isNaN(resultado)){
+        alert("That isn't a valid number!");
+        console.log('isnan');
+    }else{
+        document.getElementById('resultado').innerHTML = `Resultado: ${resultado}`;
+    }
+    
 
 }
