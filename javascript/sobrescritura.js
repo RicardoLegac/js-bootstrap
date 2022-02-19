@@ -6,7 +6,7 @@ class Empleado{
     }
 
     obtenerDetalles(){
-        return `Empleado: nombre: ${this.nombre}, sueldo: ${this.sueldo}`;
+        return `Empleado: nombre: ${this.nombre}, \nSueldo: ${this.sueldo}`;
     }
 }
 
