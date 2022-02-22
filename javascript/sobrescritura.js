@@ -17,7 +17,7 @@ class Gerente extends Empleado{
     }
     
     obtenerDetalles(){
-        return `Gerente: ${super.obtenerDetalles()} depto: ${this.departamento}`;
+        return `Gerente: ${super.obtenerDetalles()} departamento: ${this.departamento}`;
     }
 }
 
